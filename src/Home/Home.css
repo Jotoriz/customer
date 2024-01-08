@@ -1,0 +1,21 @@
+.a1 a{
+    cursor: pointer;
+}
+.picker a{
+    cursor: pointer;
+    font-weight: 600;
+}
+.Slide img{
+    height: 300px;
+    width: 1500px;
+}
+.cardimg{
+    width: 200px;
+    height: 200px;
+}
+.footer{
+    color: aliceblue;
+    margin-top: 100px;
+    padding: 50px 0px 0px 100px;
+    background-color: #2c3e50;
+}

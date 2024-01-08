@@ -1,0 +1,21 @@
+.a1 {
+    padding-top: 7px;
+    text-align: center;
+}
+
+.a1 a {
+    margin-left: 10px;
+}
+
+.custom-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.Selector .select {
+    color: rgb(9, 82, 58);
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 20px;
+}
