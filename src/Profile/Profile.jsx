@@ -26,10 +26,12 @@ function Profile() {
         description: 'Following something',
     },
   ];
+  const userDataString = localStorage.getItem('user');
+  const userData = JSON.parse(userDataString);
   const info = [
     {
         title: 'Name',
-        content: 'Dat',
+        content: userData.name,
     },
     {
         title: 'Shoes size',
@@ -37,12 +39,8 @@ function Profile() {
     },
     {
         title: 'Email address',
-        content: 'Admin@gmail.com',
-    },
-    {
-        title: 'UserName',
-        content: 'admin@gmail.com',
-    },
+        content: userData.email,
+    }
   ]
     return ( 
     <div className="custom-container">

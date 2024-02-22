@@ -5,6 +5,8 @@ import Profile from "../Profile/Profile";
 import Login from "../Login/login";
 import Register from "../Login/register";
 
+const auth = localStorage.getItem("authenticate") || false;
+
 const publicRoutes = [
   { path: "/", component: Home },
   { path: "/Profile", component: Profile },
@@ -12,7 +14,6 @@ const publicRoutes = [
   { path: "/ProductDetail/:slug", component: ProductDetail },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
-  ,
 ];
 
 const privateRoutes = [];

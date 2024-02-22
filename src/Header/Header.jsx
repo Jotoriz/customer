@@ -6,7 +6,8 @@ import AuthAction from "../actions/auth.actions";
 
 function Header() {
   const dispatch = useDispatch();
-   const auth = useSelector((state) => state.auth);
+   const auth = localStorage.getItem("authenticate") || false;
+   console.log(auth);
    const navigate = useNavigate();
    const handleLogout = () => {
     dispatch(AuthAction.signout());
@@ -39,9 +40,9 @@ function Header() {
       </Col>
       <Col xl="4" style={{ paddingLeft: "204px" }}>
 
-        {!auth.authenticate && <Link to="/login"><Button>Login</Button></Link>}
-        {auth.authenticate && <Button onClick={handleLogout}>Logout</Button>}
-        {auth.authenticate && <Button onClick={GoToProfile} style={{ marginLeft: "10px" }}>Profile</Button>}
+        {auth == false && <Link to="/login"><Button>Login</Button></Link>}
+        {auth && <Button onClick={handleLogout}>Logout</Button>}
+        {auth && <Button onClick={GoToProfile} style={{ marginLeft: "10px" }}>Profile</Button>}
         
         <Button style={{ marginLeft: "10px" }}>Sell</Button>
       </Col>

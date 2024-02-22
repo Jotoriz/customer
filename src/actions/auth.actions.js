@@ -15,6 +15,7 @@ const AuthAction = {
           const { token, user } = res.data;
           localStorage.setItem("token", token);
           localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("authenticate", true);
           dispatch({
             type: authConstants.LOGIN_SUCCESS,
             payload: {
@@ -63,9 +64,10 @@ const AuthAction = {
   signout: () => {
     return async (dispatch) => {
       dispatch({ type: authConstants.LOGOUT_REQUEST });
-
       localStorage.clear();
+
       dispatch({ type: authConstants.LOGOUT_SUCCESS });
+      window.location.reload();
     };
   },
 };
